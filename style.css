@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --paleblue: hsl(225, 100%, 94%);
+  --rightblue: hsl(245, 75%, 52%);
+
+  --verypaleblue: hsl(225, 100%, 98%);
+  --desaturatedblue: hsl(224, 23%, 55%);
+  --darkblue: hsl(223, 47%, 23%);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--paleblue);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 330px;
+  height: 570px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.card .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .hero img {
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+}
+
+.card .order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.card .order h1 {
+  color: var(--darkblue);
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.card .order p {
+  text-align: center;
+  line-height: 1.5;
+  font-size: 1rem;
+  width: 95%;
+  color: var(--desaturatedblue);
+}
+
+.card .plan {
+  margin-top: 2rem;
+  background-color: var(--verypaleblue);
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.card .plan .plan-info {
+  margin-left: -2rem;
+}
+
+.card .plan .plan-info h4 {
+  color: var(--darkblue);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.card .plan .plan-info .price {
+  font-size: 0.9rem;
+}
+
+.card .plan a {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--rightblue);
+  transition: opacity 400ms;
+}
+
+.card .plan a:hover {
+  opacity: 0.7;
+}
+
+.card .payment {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  border: 0;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background-color: var(--rightblue);
+  -webkit-transition: all 500ms linear;
+  -ms-transition: all 500ms linear;
+  transition: all 500ms linear;
+  cursor: pointer;
+}
+
+.card .payment:hover {
+  background-color: var(--rightblue);
+  opacity: 0.75;
+}
+
+.card .cancel {
+  margin-top: 1.5rem;
+  border: 0;
+  color: var(--desaturatedblue);
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: transparent;
+  transition: color 400ms;
+  cursor: pointer;
+}
+
+.card .cancel:hover {
+  color: var(--darkblue);
+}
+
+footer {
+  margin-top: 1rem;
+}
+
+@media (min-width: 1440px) {
+  .card {
+    width: 360px;
+    height: 560px;
+  }
+
+  .card .hero img {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .card .order {
+    padding: 1.2rem 2.3rem;
+  }
+
+  .card .order p {
+    font-size: 0.8rem;
+  }
+
+  .card .order .plan {
+    margin-top: 1.2rem;
+  }
+
+  .card .order .payment {
+    margin-top: 1.8rem;
+    height: 43px;
+    font-size: 0.8rem;
+  }
+
+  .card .order .cancel {
+    font-size: 0.8rem;
+  }
+}
